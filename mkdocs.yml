@@ -134,4 +134,22 @@ nav:
           - books/math/09-Feedback-and-Fairness.md
           - books/math/10-The-Math-of-Security.md
           - books/math/Glossary.md
+      - Wireless and mobile:
+          - books/wireless/index.md
+          - books/wireless/01-Radio-Waves-and-Spectrum.md
+          - books/wireless/02-Antennas-and-Link-Budgets.md
+          - books/wireless/03-Fading-and-Noise.md
+          - books/wireless/04-Modulation-and-Coding.md
+          - books/wireless/05-OFDM-and-OFDMA.md
+          - books/wireless/06-MIMO-and-Beamforming.md
+          - books/wireless/07-How-Wi-Fi-Works.md
+          - books/wireless/08-Wi-Fi-Generations.md
+          - books/wireless/09-Designing-Wi-Fi.md
+          - books/wireless/10-Wi-Fi-Security.md
+          - books/wireless/11-Bluetooth-NFC-and-UWB.md
+          - books/wireless/12-IoT-Radios.md
+          - books/wireless/13-Cellular-from-2G-to-5G.md
+          - books/wireless/14-Satellites-and-Deep-Space.md
+          - books/wireless/15-Where-Wireless-Goes.md
+          - books/wireless/Glossary.md
   # nav: end
