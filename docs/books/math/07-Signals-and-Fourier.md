@@ -44,6 +44,8 @@ edges.
 <figcaption>Two sine waves already look like the square wave; more harmonics sharpen the corners.</figcaption>
 </figure>
 
+<figure class="play" data-play="fourier"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> The square wave built from its odd harmonics, (4/π)(sin x + sin 3x/3 + sin 5x/5 + …). Press Play to add them one at a time, or use the slider.</figcaption></figure>
+
 ## 7.3 The Fourier transform and bandwidth
 
 Non-periodic signals have a continuous **spectrum**, given by the **Fourier transform**:

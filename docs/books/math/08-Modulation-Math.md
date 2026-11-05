@@ -73,6 +73,8 @@ error rate near $10^{-5}$: QPSK about 13 dB, 16-QAM about 20 dB, 64-QAM about 26
 (Chapter 6) the needs drop by several dB, and **link adaptation** chooses the densest constellation the current S/N
 supports.
 
+<figure class="play" data-play="constellation"><span class="ai-tag">AI-created</span><figcaption><b>Try it.</b> 1,200 symbols sent with random noise at the S/N you choose; the receiver picks the nearest point, and the red ones are read wrong. Compare QPSK, 16-QAM and 64-QAM with the S/N needs above. The noise is simulated.</figcaption></figure>
+
 ## 8.5 OFDM
 
 A wideband channel with echoes is frequency-selective (Chapter 7). **Orthogonal frequency-division multiplexing**

@@ -91,6 +91,8 @@ $$J = \frac{\left(\sum x_i\right)^2}{n \sum x_i^2}$$
 It is 1 when all rates are equal and $1/n$ when one flow takes everything. Experiments on new congestion controllers
 (BBR versus CUBIC, QUIC versus TCP) report it routinely.
 
+<figure class="play" data-play="jain"><span class="ai-tag">AI-created</span><figcaption><b>Try it.</b> Jain's index for four flows sharing a link. Move the rates: it is 1 when all four are equal and 0.25 when one flow takes everything. The rates are examples.</figcaption></figure>
+
 ## Check yourself
 
 ??? question "1. Two AIMD flows start at rates 8 and 2 with b = 1/2. After three decreases (and equal increases in between), how big is their difference?"

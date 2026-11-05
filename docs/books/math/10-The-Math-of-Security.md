@@ -30,6 +30,8 @@ $2\log_2 e$ multiplications: write $e$ in binary; square at each bit, and multip
 $13 = 1101_2$, so $3 \to 3^2 \cdot 3 = 3^3 \to 3^6 \to 3^{12}\cdot 3 = 3^{13}$, four steps. A 2048-bit exponent takes
 about 3,000 multiplications.
 
+<figure class="play" data-play="modpow"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> Square-and-multiply for the example 3<sup>13</sup>, here modulo 1,000 to keep the numbers short. Press Play to step through, or type another exponent: the steps grow with its number of bits, not its size.</figcaption></figure>
+
 ## 10.3 Fermat, Euler and RSA
 
 **Fermat's little theorem**: if $p$ is prime and $p \nmid a$, then $a^{p-1} \equiv 1 \pmod p$. **Euler's theorem**
