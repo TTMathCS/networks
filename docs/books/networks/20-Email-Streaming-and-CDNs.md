@@ -50,6 +50,8 @@ Because segments are ordinary files, every HTTP cache and CDN can serve them. Li
 chunks of segments: low-latency HLS and CMAF) to get delay down to a few seconds. Codecs matter as much as networks:
 AV1 and HEVC need about half the bits of the older H.264 for the same quality.
 
+<figure class="play" data-play="abr"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> A minute of streaming over a network that slows down and recovers. The player measures the speed and picks the next chunk’s quality to keep its buffer from running dry. Speeds and the rule (best quality under 80% of the speed it measured a few seconds before) are made up.</figcaption></figure>
+
 ## 20.4 Content delivery networks
 
 A server in one city cannot give fast service worldwide: the speed of light alone adds 100+ ms across an ocean, and one

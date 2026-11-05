@@ -21,6 +21,8 @@ A host runs many networked programs at once. A 16-bit **port number** says which
 A server **listens** on a known port; a client's OS picks a random ephemeral port for its end (Linux by default uses
 32768–60999). Randomising it also makes blind spoofing attacks harder.
 
+<figure class="play" data-play="ports"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> Packets arrive at one computer and the port number decides which program gets each one. A packet for a port no program listens on is refused.</figcaption></figure>
+
 ## 14.2 Multiplexing and the 5-tuple
 
 The sending side gathers data from many sockets and hands it to IP with port numbers in the headers

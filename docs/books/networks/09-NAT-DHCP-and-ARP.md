@@ -76,6 +76,8 @@ Video calls and games get through anyway with **ICE** (RFC 8445): each side lear
 that fails (strict NATs), they relay through a **TURN** server. Routers can also open ports on request with UPnP or PCP,
 which is convenient and a known security risk.
 
+<figure class="play" data-play="nat"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> Three devices at home share one public address. The router swaps each private source address and port for its public address and a port of its own, notes the pair, and swaps back when the reply comes. Addresses from the ranges kept for examples.</figcaption></figure>
+
 ## 9.4 ICMP: the network's error messages
 
 The **Internet Control Message Protocol** (RFC 792; ICMPv6 RFC 4443) carries errors and diagnostics, inside IP:

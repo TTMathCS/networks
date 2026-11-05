@@ -52,6 +52,8 @@ Each side sends up to its window of unacknowledged bytes. The receiver ACKs cumu
 one byte at a time from sending one packet per byte. Combined with delayed ACKs it can add 40 ms or more of latency to
 request-response protocols, so interactive programs set `TCP_NODELAY`.
 
+<figure class="play" data-play="handshake"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> The three-way handshake and the first 100 bytes, with made-up starting numbers: the SYN uses up one sequence number, and every ACK names the next byte expected.</figcaption></figure>
+
 ## 16.4 The retransmission timer
 
 TCP must guess how long to wait before resending. It measures RTT samples and keeps a smoothed estimate and a variation

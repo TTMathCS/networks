@@ -34,6 +34,8 @@ matches /0, /8, /16 and /24, so it goes out eth2; `10.20.9.1` matches up to /16;
 Longest match is what lets aggregation and exceptions coexist: a /16 for a whole site and a /24 for one part of it
 reached another way.
 
+<figure class="play" data-play="lpm"><span class="ai-tag">AI-created</span><figcaption><b>Try it.</b> Type a destination address and watch the forwarding table above: every prefix it matches is lit, and the longest wins.</figcaption></figure>
+
 Doing this for hundreds of millions of packets a second over a million prefixes needs special structures: **tries**
 (binary trees on the address bits, compressed into multibit or "Patricia" tries) in software, and **TCAM** in hardware,
 which compares the address with every entry at once and returns the longest match.
