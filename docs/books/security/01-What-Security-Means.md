@@ -44,6 +44,8 @@ If a breach of a database has a 10% chance per year and would cost 2 million dol
 use a simple grid (low / medium / high on each axis). Risk can be **reduced** (add a control), **transferred**
 (insurance, an outside service), **avoided** (stop doing the risky thing) or **accepted** (write it down and live with it).
 
+<figure class="play" data-play="risk"><span class="ai-tag">AI-created</span><figcaption><b>Try it.</b> The example above: change the yearly chance and the cost of a breach, and see whether a 50,000-dollar fix that cuts the chance by 80% (a made-up control) is worth it.</figcaption></figure>
+
 ## 1.3 Controls
 
 A **control** is anything that reduces risk. Controls are grouped by what they do:
