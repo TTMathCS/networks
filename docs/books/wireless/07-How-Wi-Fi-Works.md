@@ -53,6 +53,8 @@ exponential backoff.
 **EDCA** (from 802.11e, used by Wi-Fi Multimedia) gives four access categories (voice, video, best effort, background)
 their own shorter or longer waits and windows, so voice frames statistically go first.
 
+<figure class="play" data-play="csma"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> Three stations, two frames each, sharing the air with random backoff: counts freeze while someone sends, and a collision doubles the window. The backoffs are random and the timings scaled.</figcaption></figure>
+
 ## 7.4 Hidden terminals
 
 Two laptops A and C on opposite sides of an AP B may each hear B but not each other. Both sense an idle channel and send

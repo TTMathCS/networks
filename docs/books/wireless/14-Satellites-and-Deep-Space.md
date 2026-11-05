@@ -23,6 +23,8 @@ throughput (large bandwidth-delay product, networks book Chapter 17). LEO satell
 each crosses the sky in a few minutes, so a constellation needs thousands of them, and ground terminals must track them
 with phased-array antennas and hand over every few minutes.
 
+<figure class="play" data-play="orbits"><span class="ai-tag">AI-created</span><figcaption><b>Try it.</b> Raise the satellite and watch the light-speed delay grow: one hop up and down takes 2h/c, and a request with its reply takes two hops. Drawn straight overhead, the shortest case; real slant paths add more.</figcaption></figure>
+
 ## 14.2 LEO broadband
 
 **Starlink** (SpaceX) had by 2025 several thousand satellites at about 340–570 km, user terminals with electronically
