@@ -1,0 +1,124 @@
+site_name: Networks
+site_url: https://networks.akadian.ca/
+site_description: 'Computer networks and their security, from the first idea to research: theory, math, wireless and hands-on labs'
+repo_url: https://github.com/TTMathCS/networks
+edit_uri: edit/main/docs/
+copyright: 'Part of <a href="https://www.akadian.ca/">Mars – your new home</a> · Text and diagrams <span class="ai-tag">AI-created</span>, checked against the sources on each page'
+exclude_docs: |
+  README.md
+
+theme:
+  name: material
+  custom_dir: overrides
+  favicon: assets/akadian-icon.png   # the Akadian A, as on akadian.ca
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunset-up
+        name: Mars dawn
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Mars night
+  font: false
+
+extra_css:
+  - fonts/fonts.css
+  - stylesheets/mars.css
+  - stylesheets/net.css
+  - stylesheets/reader.css
+  - katex/katex.min.css
+
+extra:
+  homepage: https://www.akadian.ca/
+
+extra_javascript:
+  - javascripts/mars-link.js
+  - javascripts/home-link.js
+  - katex/katex.min.js
+  - katex/auto-render.min.js
+  - javascripts/math.js
+  - javascripts/levels.js
+  - javascripts/reader.js
+  - javascripts/levelcheck.js
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      title: On this page
+  - tables
+  - admonition
+  - pymdownx.details
+  - md_in_html
+  - attr_list
+  - pymdownx.highlight:
+      line_spans: __span
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+
+# With --strict, a broken link or #anchor stops the build
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+nav:
+  # nav: start
+  - Home: index.md
+  - Start:
+      - start/index.md
+      - start/01-What-Is-a-Network.md
+      - start/02-Packets.md
+      - start/03-Addresses-and-Names.md
+      - start/04-Wires-and-Radio.md
+      - start/05-Staying-Safe.md
+      - start/06-Talking-to-Mars.md
+  - Books:
+      - How networks work:
+          - books/networks/index.md
+          - books/networks/01-What-a-Network-Is.md
+          - books/networks/02-Layers-and-Protocols.md
+          - books/networks/03-Delay-Loss-and-Throughput.md
+          - books/networks/04-The-Physical-Layer.md
+          - books/networks/05-Framing-and-Error-Detection.md
+          - books/networks/06-Ethernet-and-Switches.md
+          - books/networks/07-VLANs-and-Spanning-Tree.md
+          - books/networks/08-IPv4-Addressing-and-Subnets.md
+          - books/networks/09-NAT-DHCP-and-ARP.md
+          - books/networks/10-IPv6.md
+          - books/networks/11-Routers-and-Forwarding.md
+          - books/networks/12-Routing-Algorithms.md
+          - books/networks/13-OSPF-and-BGP.md
+          - books/networks/14-UDP-Ports-and-Sockets.md
+          - books/networks/15-Reliable-Delivery.md
+          - books/networks/16-TCP.md
+          - books/networks/17-Congestion-Control.md
+          - books/networks/18-DNS.md
+          - books/networks/19-HTTP-and-QUIC.md
+          - books/networks/20-Email-Streaming-and-CDNs.md
+          - books/networks/21-Data-Centres-and-SDN.md
+          - books/networks/22-Running-a-Network.md
+          - books/networks/23-Where-Networks-Go.md
+          - books/networks/Glossary.md
+  # nav: end

@@ -1,0 +1,16 @@
+{% extends "main.html" %}
+
+{% block hero %}
+<section class="mars-hero">
+  <div class="md-grid mars-hero__inner">
+    <p class="mars-hero__title">Networks</p>
+    <p class="mars-hero__lead">How computers talk, by wire, by radio and across space, and how to keep that talk safe: the ideas, the math behind them and hands-on practice.</p>
+    <p class="mars-hero__go">
+      <a class="mars-cta" href="{{ 'start/' | url }}">Start here</a>
+      <a class="mars-pill" href="{{ 'topics/' | url }}">Find a topic</a>
+      <a class="mars-pill" href="{{ 'books/' | url }}">Books</a>
+      <a class="mars-pill" href="{{ 'labs/' | url }}">Labs</a>
+    </p>
+  </div>
+</section>
+{% endblock %}

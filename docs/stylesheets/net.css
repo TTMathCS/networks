@@ -1,0 +1,38 @@
+/* networks.akadian.ca: figures, the AI-created tag and quiet closed boxes (same look as cs, math, cryptography) */
+:root { --net-a: #eea66f; --net-b: #6fb7ee; --net-c: #7ccf7f; --net-d: #c792ea; }
+[data-md-color-scheme="default"] { --net-a: #c8692a; --net-b: #1f6fb2; --net-c: #2e7d32; --net-d: #7b3fa6; }
+
+.md-typeset details { border: 1px solid var(--md-default-fg-color--lightest) !important; border-radius: 8px; box-shadow: none; }
+.md-typeset details > summary { background: transparent !important; font-weight: 600; }
+.md-typeset details > summary::before { background-color: var(--md-typeset-a-color) !important; }
+.md-typeset details > summary::after { color: var(--md-default-fg-color--light); }
+
+/* the small AI-created tag (Jim, 3 Nov 2026: everything AI-made is labelled) */
+.ai-tag { display: inline-block; font-size: .7em; font-weight: 600; letter-spacing: .02em; padding: 0 .45em; border-radius: 4px;
+  border: 1px solid currentColor; opacity: .8; vertical-align: .1em; }
+
+/* figure colours: a = data, b = control, c = good, d = attacker */
+.md-typeset figure.mars-fig .na { stroke: var(--net-a); } .md-typeset figure.mars-fig .na-f { fill: var(--net-a); }
+.md-typeset figure.mars-fig .nb { stroke: var(--net-b); } .md-typeset figure.mars-fig .nb-f { fill: var(--net-b); }
+.md-typeset figure.mars-fig .nc { stroke: var(--net-c); } .md-typeset figure.mars-fig .nc-f { fill: var(--net-c); }
+.md-typeset figure.mars-fig .nd { stroke: var(--net-d); } .md-typeset figure.mars-fig .nd-f { fill: var(--net-d); }
+
+/* topic tables on the index pages */
+.md-typeset .cs-topics td:first-child { white-space: nowrap; }
+
+/* Book figures (same as cryptography.akadian.ca) */
+/* Book figures (Jim, 3 Nov 2026: "put images diagrams etc to illustrate as much as possible").
+   <figure class="mars-fig"><svg ...>...</svg><figcaption>...</figcaption></figure>
+   Lines and text use currentColor so they follow the light and dark themes; highlights use the accent. */
+.md-typeset figure.mars-fig { margin: 1.6em auto; text-align: center; max-width: 100%; }
+.md-typeset figure.mars-fig svg { display: block; margin: 0 auto; max-width: 100%; height: auto; overflow: visible; }
+.md-typeset figure.mars-fig svg text { font-family: var(--md-text-font-family, inherit); }
+.md-typeset figure.mars-fig figcaption { margin-top: .7em; font-size: .78rem; font-style: italic; opacity: .85; max-width: 46rem; margin-left: auto; margin-right: auto; }
+.md-typeset figure.mars-fig .acc { stroke: var(--md-accent-fg-color); }
+.md-typeset figure.mars-fig .acc-fill { fill: var(--md-accent-fg-color); }
+.md-typeset figure.mars-fig .soft { fill: currentColor; fill-opacity: .08; }
+.md-typeset figure.mars-fig .soft-acc { fill: var(--md-accent-fg-color); fill-opacity: .18; }
+
+/* Long display formulas scroll inside their own box on phones instead of widening the page */
+.md-typeset .katex-display { overflow-x: auto; overflow-y: hidden; padding: .2em 0; }
+.md-typeset .katex { position: relative; }
