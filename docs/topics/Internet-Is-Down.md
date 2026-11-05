@@ -34,6 +34,8 @@ Also: try another device. If your phone works on the same Wi-Fi but the laptop d
 **Calling your provider:** tell them the results: "my devices reach the router, but the router gets no internet; the
 modem's online light is red since 9 am." It saves a long script.
 
+<figure class="play" data-play="neartofar"><span class="ai-tag">AI-created</span><figcaption><b>Try it.</b> Pick what is really broken and watch the five checks above run from near to far: the first one that fails tells you where to look.</figcaption></figure>
+
 ## Expert
 
 **What each step proves.** A valid address and gateway prove DHCP worked; a ping to the gateway proves layer 1–3 on the
