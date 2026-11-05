@@ -48,6 +48,8 @@ TLS 1.3 removed everything that had caused trouble: static RSA key exchange (no 
 RC4, SHA-1, compression, renegotiation, and custom Diffie–Hellman groups. Only five AEAD cipher suites remain, and
 every key exchange is ephemeral, so every connection has forward secrecy.
 
+<figure class="play" data-play="tls13"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> TCP's round trip, then TLS 1.3's single round trip: the key share travels in the very first message, so the request can go with the client's Finished. Change the round-trip time to see when it leaves.</figcaption></figure>
+
 ## 8.3 How the client trusts the server
 
 The client must check that the certificate chain leads to a trusted root, that the name in the certificate (its

@@ -36,6 +36,8 @@ defences followed: random upper/lower case in query names ("0x20" encoding), str
 resolver accepts ("bailiwick" checks), and, in 2020, the **SAD DNS** attack showed that side channels in ICMP rate
 limits could reveal the port, so operating systems changed those too. The complete answer is cryptographic: DNSSEC.
 
+<figure class="play" data-play="kaminsky"><span class="ai-tag">AI-created</span><figcaption><b>Try it.</b> Guessing a DNS answer off-path, Kaminsky-style: each race wins if one forged answer matches the 16-bit ID, and after 2008 also the random source port. The attack pace is a made-up example: one race every 0.1 s.</figcaption></figure>
+
 ## 7.3 DNSSEC
 
 **DNSSEC** (RFCs 4033–4035) signs DNS data, so a resolver can check that an answer really came from the zone's owner

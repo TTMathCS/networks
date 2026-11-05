@@ -24,6 +24,8 @@ Stateless filters are fast and still used (router access lists, edge filtering o
 replies badly: to let answers back in, you must allow all traffic *from* port 443, which an attacker can use by
 sending from that port.
 
+<figure class="play" data-play="firstmatch"><span class="ai-tag">AI-created</span><figcaption><b>Try it.</b> The three rules above, read top to bottom; the first that matches decides. Send each packet and see which rule catches it.</figcaption></figure>
+
 ## 11.2 Stateful firewalls
 
 A **stateful** firewall keeps a **connection table**. When an inside host opens a TCP connection, the firewall records

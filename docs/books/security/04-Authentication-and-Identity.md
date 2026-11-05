@@ -37,6 +37,8 @@ defeats credential stuffing.
 Online guessing is limited by **rate limiting** and lockouts; offline guessing (after a database is stolen) is limited
 only by the hash's cost.
 
+<figure class="play" data-play="guess"><span class="ai-tag">AI-created</span><figcaption><b>Try it.</b> How long a <em>random</em> password lasts once a database is stolen: entropy is length × log<sub>2</sub>(alphabet), and on average the attacker tries half of all choices. The two guessing rates are rough examples of a fast hash on one graphics card and a slow, memory-hard one.</figcaption></figure>
+
 ## 4.3 MFA and passkeys
 
 Not all second factors are equal:

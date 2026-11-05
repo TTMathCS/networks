@@ -46,6 +46,8 @@ security needs 256-bit hashes. **MD5** and **SHA-1** are broken for collisions (
 A **MAC** (message authentication code) is a keyed checksum: only someone with the key can make a valid tag. **HMAC**
 builds one from any hash: $\text{HMAC}(K, m) = H\big((K \oplus \text{opad}) \,\|\, H((K \oplus \text{ipad}) \,\|\, m)\big)$.
 
+<figure class="play" data-play="avalanche"><span class="ai-tag">AI-created</span><figcaption><b>Try it.</b> Type anything: your browser hashes it with SHA-256, and also the same text with one bit of its last letter flipped. The gold squares are the output bits that changed, about half of them every time. Nothing is sent anywhere.</figcaption></figure>
+
 ## 3.4 Public-key cryptography
 
 Each party has a **private key** (kept secret) and a **public key** (shared). This solves the problem symmetric
