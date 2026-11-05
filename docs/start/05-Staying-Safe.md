@@ -22,6 +22,8 @@ When a web address starts with **https** and your browser shows a padlock, two t
 The padlock does **not** mean the website is honest or safe. A tricky site can have a padlock too. It only means
 nobody in the middle can read or change what you send.
 
+<figure class="play" data-play="postcard"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> A message passes four routers. Without the padlock each can read it, like a postcard; with HTTPS they pass on scrambled bytes only the website can open. The scrambled text is made up for the picture.</figcaption></figure>
+
 ## Proving who you are
 
 Websites need to know it is really you. The ways to prove it are:

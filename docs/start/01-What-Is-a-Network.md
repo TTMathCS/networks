@@ -49,6 +49,8 @@ No one owns the whole internet and no one switches it on or off. It works becaus
 rules about how to send and receive messages. Those rules are called **protocols**, and you will meet many of them on
 this site.
 
+<figure class="play" data-play="mesh"><span class="ai-tag">AI-created</span><figcaption><b>Try it.</b> Tap a link to cut it, and tap again to mend it. The message from A to H finds the way with the fewest hops among the links that are left. Cut enough and the network splits in two.</figcaption></figure>
+
 ## Fun facts
 
 - About 600 cables lie on the sea floor or are being laid, some longer than 20,000 kilometres, carrying almost all messages between

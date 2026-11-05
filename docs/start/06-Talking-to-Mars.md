@@ -18,6 +18,8 @@ Compare: a packet from Toronto to Tokyo and back takes about 0.15 seconds.
 So you can never have a chat with Mars. You say "hello", and the answer arrives after your dinner is cold. A rover
 cannot be driven with a joystick either: it gets a day's instructions in one go and drives itself.
 
+<figure class="play" data-play="delay"><span class="ai-tag">AI-created</span><figcaption><b>Press Play</b> to run Earth and Mars on their real orbits from 2026 to 2030. The line between them is the radio path; the numbers are its length and the time light takes. When Mars passes behind the Sun, missions stop sending commands for a couple of weeks. Orbits from NASA JPL’s mean elements.</figcaption></figure>
+
 ## Giant ears on Earth
 
 Radio spreads out as it travels, like the ripples from a stone in a pond. By the time a signal from Mars reaches us,

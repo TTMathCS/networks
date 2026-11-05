@@ -56,6 +56,8 @@ Sometimes a packet is lost: a router was too busy, or radio noise scrambled it. 
 arrived. For anything that must be perfect, like a file or a web page, it says "I got 1 to 56 and 58 to 300; please
 send 57 again". For a video call, a lost piece is usually just skipped: a tiny glitch is better than waiting.
 
+<figure class="play" data-play="packets"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> A message cut into six numbered packets. They take different roads, arrive out of order and are put back together by their numbers. Packet 3 is lost on the way, so the receiver asks for it again.</figcaption></figure>
+
 ## Activity: the postcard race
 
 Write a sentence of ten words on ten small cards, one word each, numbered 1 to 10. Shuffle them and give them to ten

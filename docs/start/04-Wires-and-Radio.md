@@ -17,6 +17,8 @@ two-thirds of its speed in empty space, roughly 200,000 kilometres a second, and
 light at once, each with its own stream of bits. That is why the cables under the oceans are all fibre: one cable
 carries hundreds of terabits (hundreds of millions of millions of bits) every second.
 
+<figure class="play" data-play="lightspeed"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> A race over 1,000 km, slowed down a million times: radio through the air at nearly 300,000 km a second, light in glass at about 200,000. Glass is the slower road, but it carries far more.</figcaption></figure>
+
 ## Radio: waves through the air
 
 Radio is a wave of electric and magnetic energy, like light but invisible to our eyes. A radio wave has a

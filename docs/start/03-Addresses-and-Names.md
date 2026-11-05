@@ -49,6 +49,8 @@ No single computer holds the whole phone book. The top servers know who looks af
 who looks after `akadian.ca`; and that one knows the address of `www.akadian.ca`. Your computer follows the chain,
 then remembers the answer for a while so the next visit is instant.
 
+<figure class="play" data-play="dnswalk"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> Looking up www.akadian.ca the first time: the resolver asks the root, then the .ca servers, then akadian.ca’s own server, reading the name from right to left. Ask again and it answers from memory. Server names simplified.</figcaption></figure>
+
 ## Two more numbers
 
 Each packet carries two more labels:
