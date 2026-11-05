@@ -42,6 +42,8 @@ From u:
 
 So u reaches z at cost 4 via x then y; its forwarding entry for z is "next hop x".
 
+<figure class="play" data-play="dijkstra"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> Press Play to step through Dijkstra's algorithm from u on the example network: the gold router is the one just made final, the numbers are the best costs found so far, and the gold links are the shortest-path tree. Cut a link and play again to see u's route to z change.</figcaption></figure>
+
 Link-state converges fast after a change (one flood, one recomputation) and every router can check the map. Costs:
 flooding and memory for the database, and every router must agree. **OSPF** and **IS-IS** are link-state (Chapter 13).
 

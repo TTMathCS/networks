@@ -65,6 +65,8 @@ classic ones.
 <figcaption>A sliding window: as ACKs arrive the window slides right, allowing new packets to be sent.</figcaption>
 </figure>
 
+<figure class="play" data-play="gbn"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> Go-Back-N with a window of 4 and 10 packets. Time runs to the right; packets fall from the sender, ACKs (dashed) climb back. When packet 2 is lost the receiver throws away 3, 4 and 5, and after its timer runs out the sender sends the whole window again. Losing one ACK costs nothing, because the next ACK says the same and more. Times are made up to keep it readable.</figcaption></figure>
+
 Go-Back-N is simple (the receiver keeps no buffer) but wasteful: one lost packet in a large window causes many correct
 packets to be resent.
 

@@ -71,6 +71,8 @@ Typical sizes: Ethernet header 14 bytes plus a 4-byte trailer, IPv4 header 20 by
 options). On a 1,500-byte Ethernet payload, about 1,460 bytes are left for application data. The **maximum
 transmission unit (MTU)** is the largest packet a link can carry; 1,500 bytes is standard Ethernet.
 
+<figure class="play" data-play="encap"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> Press Play to send a 1,460-byte request down the laptop's layers, across the cable and up the server's. Each layer adds its header on the way down (TCP 20 bytes, IP 20, Ethernet 14 plus a 4-byte trailer) and takes it off on the way up. Sizes from the text above.</figcaption></figure>
+
 ## 2.6 The end-to-end argument
 
 In 1984 Saltzer, Reed and Clark argued that a function such as reliable delivery "can completely and correctly be

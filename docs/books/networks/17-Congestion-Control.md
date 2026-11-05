@@ -63,6 +63,8 @@ point diagonally (both grow by the same amount); multiplicative decrease moves i
 same ratio), which shrinks the *difference* between them. Repeat, and the point zig-zags toward the fair line
 $x_1 = x_2$.
 
+<figure class="play" data-play="aimd"><span class="ai-tag">AI-created</span><figcaption><b>Try it.</b> Two flows share a link of 100 segments per round trip; flow 1 starts with 80, flow 2 with 5. Each round trip both add one; when the link overflows, both lose a packet. With AIMD (halving) the point zig-zags to the fair line; take a fixed amount off instead, or grow by a percentage, and the unfair split never goes away. A toy: real flows do not always lose packets at the same moment.</figcaption></figure>
+
 A rough formula for a Reno flow's throughput with loss probability $p$ (Mathis and others, 1997):
 
 $$\text{throughput} \approx \frac{\text{MSS}}{\text{RTT}} \cdot \sqrt{\frac{3}{2p}}$$
