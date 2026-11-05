@@ -70,6 +70,8 @@ and application session keys.
 **Sigfox** was a similar operator-run ultra-narrowband network (100 Hz signals, 12-byte messages); after financial
 difficulties in 2022 it continues under new ownership (UnaBiz) with a smaller footprint.
 
+<figure class="play" data-play="lora"><span class="ai-tag">AI-created</span><figcaption><b>Try it.</b> Raise LoRa's spreading factor: each step doubles the time on air and gains about 2.5 dB. The reach shown is for open air, where 2.5 dB is about a third more distance; buildings cut it.</figcaption></figure>
+
 ## 12.7 Cellular IoT
 
 Mobile operators offer two 3GPP technologies in licensed spectrum, with operator-grade coverage and roaming:

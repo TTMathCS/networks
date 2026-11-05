@@ -52,6 +52,8 @@ that as real throughput after the protocol's overheads.
 
 The needed S/N figures are approximate: they depend on the receiver, the target error rate and the channel.
 
+<figure class="play" data-play="mcs"><span class="ai-tag">AI-created</span><figcaption><b>Try it.</b> Link adaptation with the table above: change the S/N and see which MCS the access point can use, then the channel width and number of streams. The S/N need is taken at the top of each range.</figcaption></figure>
+
 ## 4.4 Link adaptation
 
 The channel changes constantly (Chapter 3), so transmitters keep choosing the MCS:

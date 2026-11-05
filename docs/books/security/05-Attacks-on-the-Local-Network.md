@@ -63,6 +63,8 @@ a disaster into a nuisance: the attacker sees only ciphertext and cannot fake th
 **Defence: Dynamic ARP Inspection** (DAI) on the switch drops ARP replies whose IP–MAC pair does not match what the
 switch learned from DHCP (the snooping table below). Static ARP entries work for a few critical hosts.
 
+<figure class="play" data-play="arpspoof"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> A fake ARP reply puts the attacker between the victim and the router; then see the same attack with the switch checking ARP. The addresses are examples.</figcaption></figure>
+
 ## 5.5 Rogue DHCP
 
 DHCP has no authentication either: the client takes the first offer. A **rogue DHCP server** (an attacker's, or an
