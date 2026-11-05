@@ -58,6 +58,8 @@ idle, so some designs split flows at pauses longer than the path-delay differenc
 packet with reorder-tolerant transports, or adapt to measured congestion. Any switch can fail and traffic simply uses
 the others.
 
+<figure class="play" data-play="ecmp"><span class="ai-tag">AI-created</span><figcaption><b>Try it.</b> Eight flows hashed onto four spines. Reshuffle to see how often two big flows share a spine while another sits idle. The flows are made up.</figcaption></figure>
+
 ## 21.4 Load balancers
 
 A service's one public address fronts thousands of servers. A **layer 4 load balancer** spreads connections by 5-tuple

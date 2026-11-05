@@ -51,6 +51,8 @@ loop is flooded by each switch to the next, forever, and multiplies at every bra
 storm** saturates every link and switches' MAC tables flap as the same source address appears on different ports. The
 network stops.
 
+<figure class="play" data-play="storm"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> One broadcast enters a triangle of switches. With no hop count the copies circle forever; with Spanning Tree one port blocks and the flood stops.</figcaption></figure>
+
 ## 7.5 Spanning Tree Protocol
 
 Radia Perlman's **Spanning Tree Protocol (STP)** (1985, standardised as IEEE 802.1D) lets switches agree on a loop-free

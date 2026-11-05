@@ -82,6 +82,8 @@ why changes take time to spread. Typical TTLs: 300 s for records that may move, 
 delegations. Lower a TTL a day *before* a planned move. Resolvers also cache **negative** answers ("no such name",
 NXDOMAIN) for the time set in the SOA.
 
+<figure class="play" data-play="ttlcache"><span class="ai-tag">AI-created</span><figcaption><b>Try it.</b> An hour of questions for one name at a resolver (the arrival times are made up). Gold went upstream, blue came from the cache, red got the old address after the record changed at 20 minutes. Change the TTL.</figcaption></figure>
+
 ## 18.7 The message
 
 Queries and replies share one format: a 12-byte header (a 16-bit **ID**, flags such as *recursion desired*,

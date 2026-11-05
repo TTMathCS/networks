@@ -62,6 +62,8 @@ When a router has several routes to the same prefix, it applies these rules in o
 
 Note that path length comes second. BGP finds *acceptable* paths by policy, not shortest ones.
 
+<figure class="play" data-play="bgppick"><span class="ai-tag">AI-created</span><figcaption><b>Try it.</b> Three routes to one prefix. Tap a route to raise its LOCAL_PREF from 100 to 200 and see policy beat path length. The routes and numbers are made up.</figcaption></figure>
+
 ## 13.5 Policy: who pays whom
 
 Business relationships decide routing (the Gao-Rexford model):

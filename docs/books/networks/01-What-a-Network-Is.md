@@ -18,6 +18,8 @@ one link and send them out on another. There are two kinds you will meet constan
 - a **switch** forwards within one local network, using hardware (MAC) addresses (Chapter 6);
 - a **router** forwards between networks, using IP addresses (Chapter 11).
 
+<figure class="play" data-play="fullmesh"><span class="ai-tag">AI-created</span><figcaption><b>Try it.</b> Join every pair of hosts directly, or each host to one switch: the first grows as n(n−1)/2, the second as n.</figcaption></figure>
+
 ## 1.2 The edge and the core
 
 Picture the internet as a city. The **network edge** is the houses: hosts and the **access networks** that join them
