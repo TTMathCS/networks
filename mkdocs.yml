@@ -88,13 +88,23 @@ nav:
   - Home: index.md
   - Start:
       - start/index.md
+      - Find your level: level-check.md
       - start/01-What-Is-a-Network.md
       - start/02-Packets.md
       - start/03-Addresses-and-Names.md
       - start/04-Wires-and-Radio.md
       - start/05-Staying-Safe.md
       - start/06-Talking-to-Mars.md
+  - Topics:
+      - topics/index.md
+      - "Set up home Wi-Fi well": topics/Home-Wi-Fi.md
+      - "When the internet is down": topics/Internet-Is-Down.md
+      - "How HTTPS keeps a page private": topics/HTTPS.md
+      - "VPNs": topics/VPNs.md
+      - "Firewalls": topics/Firewalls.md
+      - "DNS: names to addresses": topics/DNS.md
   - Books:
+      - books/index.md
       - How networks work:
           - books/networks/index.md
           - books/networks/01-What-a-Network-Is.md
@@ -152,4 +162,44 @@ nav:
           - books/wireless/14-Satellites-and-Deep-Space.md
           - books/wireless/15-Where-Wireless-Goes.md
           - books/wireless/Glossary.md
+      - Network security:
+          - books/security/index.md
+          - books/security/01-What-Security-Means.md
+          - books/security/02-Attackers-and-Attacks.md
+          - books/security/03-The-Cryptography-Toolkit.md
+          - books/security/04-Authentication-and-Identity.md
+          - books/security/05-Attacks-on-the-Local-Network.md
+          - books/security/06-Attacks-on-IP-and-Routing.md
+          - books/security/07-DNS-Security.md
+          - books/security/08-TLS-and-HTTPS.md
+          - books/security/09-IPsec-and-VPNs.md
+          - books/security/10-SSH.md
+          - books/security/11-Firewalls-and-Segmentation.md
+          - books/security/12-Detection-and-Monitoring.md
+          - books/security/13-Denial-of-Service.md
+          - books/security/14-Web-Application-Security.md
+          - books/security/15-Zero-Trust.md
+          - books/security/16-Incident-Response.md
+          - books/security/17-Testing-Your-Own-Network.md
+          - books/security/18-Where-Security-Goes.md
+          - books/security/Glossary.md
+  - Labs:
+      - labs/index.md
+      - labs/01-Your-Lab.md
+      - labs/02-Ping-and-Traceroute.md
+      - labs/03-Interfaces-and-Routes.md
+      - labs/04-DNS-with-dig.md
+      - labs/05-HTTP-and-TLS-with-curl.md
+      - labs/06-Capturing-Packets.md
+      - labs/07-A-Network-on-One-Laptop.md
+      - labs/08-Running-OSPF.md
+      - labs/09-Socket-Programming.md
+      - labs/10-A-Firewall-with-nftables.md
+      - labs/11-A-WireGuard-VPN.md
+      - labs/12-SSH-Keys-and-Hardening.md
+      - labs/13-Surveying-Your-Wi-Fi.md
+      - labs/14-Scanning-Your-Own-Network.md
+      - labs/15-Crafting-Packets-with-Scapy.md
+  - How to read this site: how-to-read.md
+  - What's new: new.md
   # nav: end
