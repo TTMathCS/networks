@@ -121,4 +121,17 @@ nav:
           - books/networks/22-Running-a-Network.md
           - books/networks/23-Where-Networks-Go.md
           - books/networks/Glossary.md
+      - Math foundations:
+          - books/math/index.md
+          - books/math/01-Bits-Binary-and-Masks.md
+          - books/math/02-Probability-for-Networks.md
+          - books/math/03-Queues-and-Littles-Law.md
+          - books/math/04-Graphs-and-Flows.md
+          - books/math/05-Information-and-Capacity.md
+          - books/math/06-Error-Correcting-Codes.md
+          - books/math/07-Signals-and-Fourier.md
+          - books/math/08-Modulation-Math.md
+          - books/math/09-Feedback-and-Fairness.md
+          - books/math/10-The-Math-of-Security.md
+          - books/math/Glossary.md
   # nav: end
