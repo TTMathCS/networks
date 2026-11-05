@@ -56,6 +56,8 @@ Applied bit by bit:
 Reading a field: TCP's flags are one byte; SYN is bit value `0x02` and ACK `0x10`. A SYN-ACK has flags `0x12`, and
 `flags & 0x02` is non-zero exactly when SYN is set. Wireshark display filters (`tcp.flags.syn == 1`) do this for you.
 
+<figure class="play" data-play="bitops"><span class="ai-tag">AI-created</span><figcaption><b>Try it.</b> Tap any bit to flip it, then pick AND, OR or XOR. Each answer bit depends only on the two bits above it; AND with a mask keeps just the bits where the mask has 1s. The two bytes are examples.</figcaption></figure>
+
 ## 1.3 Masks and prefixes
 
 A **prefix length** $p$ means the mask has $p$ ones then $32 - p$ zeros:

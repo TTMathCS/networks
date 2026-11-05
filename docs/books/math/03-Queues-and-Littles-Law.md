@@ -70,6 +70,8 @@ explodes. It is why operators upgrade links at 70–80% peak utilisation.
 <figcaption>Average delay in an M/M/1 queue against load: almost flat at first, then shooting up as the load approaches 1.</figcaption>
 </figure>
 
+<figure class="play" data-play="mm1"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> An M/M/1 queue served at one packet per time unit. Choose the load ρ and press Play: the average time in the system is 1/(1 − ρ) time units, so it climbs steeply as ρ nears 1. The arrivals are simulated.</figcaption></figure>
+
 ## 3.4 Other service laws
 
 With deterministic service (fixed packet size), the **Pollaczek-Khinchine formula** for M/G/1 gives the mean waiting

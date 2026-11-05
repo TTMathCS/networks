@@ -58,6 +58,8 @@ used in designing physical networks and in multicast.
 MST. Kruskal's algorithm (add edges cheapest first, skipping any that would make a cycle) and Prim's (grow one tree,
 always adding the cheapest edge leaving it) both follow from it.
 
+<figure class="play" data-play="kruskal"><span class="ai-tag">AI-created</span><figcaption><b>Watch it.</b> Kruskal's method: take the links from cheapest up and keep each one unless it closes a loop. The kept links join every node at the lowest total cost. The network and its costs are made up.</figcaption></figure>
+
 ## 4.4 How robust is a network?
 
 The **edge connectivity** $\lambda(G)$ is the fewest links whose failure disconnects the graph; **node connectivity**
