@@ -3,17 +3,20 @@ Run from the repo root: python3 tools/nav.py"""
 import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from outline import START, BOOKS, TOPICS, EXPLAINERS
-L = ["  # nav: start", "  - Home: index.md", "  - Start:", "      - start/index.md", "      - Find your level: level-check.md"]
+# Five tabs (cntourit, 8 Nov 2026: "too many categories"): How to read and What's new sit under Home,
+# the picture explainers sit under Topics (their addresses stay /explainers/...).
+L = ["  # nav: start", "  - Home:", "      - index.md", "      - How to read this site: how-to-read.md", "      - What's new: new.md", "  - Start:", "      - start/index.md", "      - Find your level: level-check.md"]
 L += [f"      - start/{f}.md" for f, _ in START]
-L += ["  - Topics:", "      - topics/index.md"] + [f"      - \"{t}\": topics/{f}.md" for f, t in TOPICS]
-L += ["  - Explainers:", "      - explainers/index.md"] + [f"      - \"{t}\": explainers/{f}.md" for f, t in EXPLAINERS]
+L += ["  - Topics:", "      - topics/index.md", "      - Explained with pictures:", "          - explainers/index.md"]
+L += [f"          - \"{t}\": explainers/{f}.md" for f, t in EXPLAINERS]
+L += ["      - Step-by-step guides:"] + [f"          - \"{t}\": topics/{f}.md" for f, t in TOPICS]
 L += ["  - Books:", "      - books/index.md"]
 for slug in ["networks", "math", "wireless", "security"]:
     title, chs = BOOKS[slug]
     L += [f"      - {title}:", f"          - books/{slug}/index.md"] + [f"          - books/{slug}/{c}.md" for c in chs]
 title, chs = BOOKS["labs"]
 L += ["  - Labs:", "      - labs/index.md"] + [f"      - labs/{c}.md" for c in chs]
-L += ["  - How to read this site: how-to-read.md", "  - What's new: new.md", "  # nav: end"]
+L += ["  # nav: end"]
 def ok(line):
     if ": " in line.strip("- ").split(".md")[0] and line.strip().endswith(".md"):
         f = line.split(": ")[-1].strip()

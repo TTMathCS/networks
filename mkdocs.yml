@@ -91,7 +91,10 @@ validation:
 
 nav:
   # nav: start
-  - Home: index.md
+  - Home:
+      - index.md
+      - How to read this site: how-to-read.md
+      - What's new: new.md
   - Start:
       - start/index.md
       - Find your level: level-check.md
@@ -103,17 +106,18 @@ nav:
       - start/06-Talking-to-Mars.md
   - Topics:
       - topics/index.md
-      - "Set up home Wi-Fi well": topics/Home-Wi-Fi.md
-      - "When the internet is down": topics/Internet-Is-Down.md
-      - "How HTTPS keeps a page private": topics/HTTPS.md
-      - "VPNs": topics/VPNs.md
-      - "Firewalls": topics/Firewalls.md
-      - "DNS: names to addresses": topics/DNS.md
-  - Explainers:
-      - explainers/index.md
-      - "How email gets delivered": explainers/Email-Delivery.md
-      - "How DNS works": explainers/How-DNS-Works.md
-      - "How a web page reaches you": explainers/How-a-Page-Reaches-You.md
+      - Explained with pictures:
+          - explainers/index.md
+          - "How email gets delivered": explainers/Email-Delivery.md
+          - "How DNS works": explainers/How-DNS-Works.md
+          - "How a web page reaches you": explainers/How-a-Page-Reaches-You.md
+      - Step-by-step guides:
+          - "Set up home Wi-Fi well": topics/Home-Wi-Fi.md
+          - "When the internet is down": topics/Internet-Is-Down.md
+          - "How HTTPS keeps a page private": topics/HTTPS.md
+          - "VPNs": topics/VPNs.md
+          - "Firewalls": topics/Firewalls.md
+          - "DNS: names to addresses": topics/DNS.md
   - Books:
       - books/index.md
       - How networks work:
@@ -211,6 +215,4 @@ nav:
       - labs/13-Surveying-Your-Wi-Fi.md
       - labs/14-Scanning-Your-Own-Network.md
       - labs/15-Crafting-Packets-with-Scapy.md
-  - How to read this site: how-to-read.md
-  - What's new: new.md
   # nav: end

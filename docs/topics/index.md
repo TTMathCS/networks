@@ -1,6 +1,22 @@
 # Topics
 
-*Start from the job you want to do. Each guide is one page in four parts, so you can stop at the part you need.*
+*Pick the subject you need. There are two kinds of page here: long explainers with pictures, for readers who have
+never seen the words before, and short step-by-step guides for a job you want to do.*
+
+## Explained with pictures { #explained-with-pictures }
+
+Long, picture-led walks through the everyday internet. Each one starts from a real situation, explains every term
+the first time, and ends with a glossary. [More about the explainers](../explainers/index.md).
+
+| Explainer | What you will understand |
+|---|---|
+| [How email gets delivered](../explainers/Email-Delivery.md) | why a school's emails suddenly bounced, and how domains, DNS, SPF, DKIM and DMARC fixed it |
+| [How DNS works](../explainers/How-DNS-Works.md) | the internet's phone book, step by step, and who runs it for the whole world |
+| [How a web page reaches you](../explainers/How-a-Page-Reaches-You.md) | the journey of one click: addresses, routers, HTTPS and CDNs |
+
+## Step-by-step guides { #guides }
+
+Each guide is one page in four parts, so you can stop at the part you need.
 
 | Part | Level | What it holds |
 |---|---|---|
@@ -8,10 +24,6 @@
 | **Do it** | Intermediate | the steps and commands to use |
 | **Expert** | Expert | how it really works, the standards, common mistakes, best practices |
 | **Now and next** | Expert: the latest | recent changes and open questions, with the date it was checked |
-
-Each guide stays short and links to the [Books](../books/index.md) and [Labs](../labs/index.md) for depth.
-
-## Guides
 
 | Guide | The job |
 |---|---|
@@ -22,4 +34,4 @@ Each guide stays short and links to the [Books](../books/index.md) and [Labs](..
 | [Firewalls](Firewalls.md) | decide what may come in and go out, at home and on servers |
 | [DNS: names to addresses](DNS.md) | how names are found, made private, kept honest, and fixed |
 
-New to all this? The [Explainers](../explainers/index.md) start from the very beginning: [how email gets delivered](../explainers/Email-Delivery.md), [how DNS works](../explainers/How-DNS-Works.md) and [how a web page reaches you](../explainers/How-a-Page-Reaches-You.md).
+For full depth, every topic links to the [Books](../books/index.md) and [Labs](../labs/index.md).

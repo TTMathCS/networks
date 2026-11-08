@@ -1,4 +1,4 @@
-# Explainers
+# Explained with pictures
 
 *Long, picture-led walks through how the everyday internet really works, written for people who have never seen
 the words before: school staff, small-organisation admins, curious students. Each one starts from a real situation,
@@ -10,4 +10,4 @@ explains every term the first time, and ends with a glossary. Read them in any o
 | [How DNS works](How-DNS-Works.md) | the internet's phone book: what happens in a lookup, step by step, and who runs DNS for the whole world (ICANN, IANA, root servers, registries, registrars) |
 | [How a web page reaches you](How-a-Page-Reaches-You.md) | the journey of one click: IP addresses, packets, your home router, routers and BGP, TCP and QUIC, HTTPS, HTTP and CDNs |
 
-For short, do-it-yourself guides see [Topics](../topics/index.md); for full depth, the [Books](../books/index.md).
+These pages are part of [Topics](../topics/index.md), next to the short [step-by-step guides](../topics/index.md#guides); for full depth, see the [Books](../books/index.md).

@@ -80,9 +80,9 @@ Network and security professionals, university and beyond.
 
 <p class="level-check-link" markdown>Not sure which one is you? [Take the one-minute level check →](level-check.md)</p>
 
-## Explainers { #explainers }
+## Explained with pictures { #explainers }
 
-Picture-led walks through the everyday internet, for readers who have never seen the words before.
+Picture-led walks through the everyday internet, for readers who have never seen the words before. They live under [Topics](topics/index.md), next to the step-by-step guides.
 
 | Explainer | What you will understand |
 | --- | --- |
