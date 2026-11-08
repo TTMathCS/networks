@@ -319,13 +319,44 @@ Here is how Maple Hill's setup looked when the problem was investigated, and wha
    Google for staff mail, Opalstack for the website's contact form, soft fail for everyone else.
 2. **DKIM.** In Google Admin → Apps → Google Workspace → Gmail → **Authenticate email**, choose the domain, click
    **Generate new record** (2048-bit, selector `google`), and copy the value. At Opalstack, add a TXT record named
-   `google._domainkey` with that value, pasted **in one piece**.
+   `google._domainkey` with that value, pasted **in one piece**. See the [example below](#what-the-dkim-record-looks-like).
 3. **DMARC.** At Opalstack, a TXT record named `_dmarc`:
    ```text
    v=DMARC1; p=none; rua=mailto:dmarc-reports@maplehill.example
    ```
 4. **Activate.** Back in Google Admin, after the DKIM record is visible in DNS (minutes to a few hours, up to 48),
    click **Start authentication**. The status changes to "Authenticating email with DKIM".
+
+### What the DKIM record looks like
+
+!!! example "Example only: your value will be different"
+    | Field at the DNS host | What to type |
+    |---|---|
+    | **Name** (or Host) | `google._domainkey` (some screens show the full name, `google._domainkey.maplehill.example`; do not type the domain twice) |
+    | **Type** | `TXT` |
+    | **TTL** | leave the default (often 3600) |
+    | **Value** (or Content, Text) | one long line, starting `v=DKIM1; k=rsa; p=` |
+
+    A made-up value in the right format, about 410 characters, all on **one line** (slide sideways to see it all):
+
+    ```text
+    v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA/FNz/jnlTGKNA4zDq/xsFNpss/IbAF9Mq2fJd+UVQ8lf0LBs5wBs6ZBVM25kfafz9fwvA8XXZv6wxn/7rxjTc3XTtn8Tz4/hYqWDFc8WorDKo1sNRn/o0SbrAkH2hWTXGkDJZqM2CvUBg725jF7NGOwn109+VPggh3deHHVh5QCVPos2/D+tetPX8lF3XBGUMBdEdlO3dpRKBzSKyqimObYUvqk6O20Eqeu2aBJjBeScBj1aU/U0U3Q0us797TxqMwyooBmeut1FCRH7m6D82DxYUajmHqsSh2BZfwSLSdLzBfqIQuV4JxgPhQdZZpq5cbW3h94bxYSvy0wNdC4MXQIDAQAB
+    ```
+
+    - `v=DKIM1` says "this is a DKIM key"; `k=rsa` names the kind of key; everything after `p=` is the public
+      key itself, in letters, digits, `+` and `/`. A 2048-bit key always starts `MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA`
+      and ends `IDAQAB`.
+    - Paste it **exactly as copied**: no line breaks, no spaces added inside the key, and no extra quote marks
+      unless the DNS host asks for them.
+    - A TXT value can hold at most 255 characters per piece, so some DNS hosts store a long key as two quoted
+      pieces, like this. That is normal and works, because receivers join the pieces back together:
+
+    ```text
+    "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA/FNz/jnlTGKNA4zDq/xsFNpss/IbAF9Mq2fJd+UVQ8lf0LBs5wBs6ZBVM25kfafz9fwvA8XXZv6wxn/7rxjTc3XTtn8Tz4/hYqWDFc8WorDKo1sNRn/o0SbrAkH2hWTXGkDJZqM2CvUBg72" "5jF7NGOwn109+VPggh3deHHVh5QCVPos2/D+tetPX8lF3XBGUMBdEdlO3dpRKBzSKyqimObYUvqk6O20Eqeu2aBJjBeScBj1aU/U0U3Q0us797TxqMwyooBmeut1FCRH7m6D82DxYUajmHqsSh2BZfwSLSdLzBfqIQuV4JxgPhQdZZpq5cbW3h94bxYSvy0wNdC4MXQIDAQAB"
+    ```
+
+    - To check it: look up `google._domainkey.maplehill.example` with type `TXT` on dns.google or MXToolbox's
+      "DKIM Lookup" (selector `google`). It should show the same long value, with nothing cut off.
 
 The useless old TXT line was deleted at the same time. A test message to a Hotmail address and a Yahoo address
 arrived in the inbox the same day, and Gmail's **Show original** showed `SPF: PASS`, `DKIM: PASS`, `DMARC: PASS`.
