@@ -58,7 +58,9 @@
 
   // ---- ticks for finished chapters ----
   var done = load(KEY + "-done"), pos = load(KEY + "-pos");
-  nav.forEach(function (n) { if (done[n.path]) n.a.classList.add("reader-done"); });
+  // the tick says what it means when pointed at (cntourit, 8 Nov 2026: "why there is green check?")
+  function tick(a) { a.classList.add("reader-done"); a.title = "You have read this page to the end (remembered in this browser only)"; }
+  nav.forEach(function (n) { if (done[n.path]) tick(n.a); });
 
   // ---- reading settings ----
   var header = document.querySelector(".md-header__inner");
@@ -267,7 +269,7 @@
     var io = new IntersectionObserver(function (es) {
       if (!es[0].isIntersecting) return;
       done[here] = 1; save(KEY + "-done", done);
-      if (at >= 0) nav[at].a.classList.add("reader-done");
+      if (at >= 0) tick(nav[at].a);
       io.disconnect();
     });
     io.observe(target);
