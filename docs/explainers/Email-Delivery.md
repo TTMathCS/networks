@@ -70,6 +70,13 @@ on your page.
     says your nameservers are `ns1.opalstack.com`, then your phone-book page lives at Opalstack, and any record you
     type into the registrar's own DNS screen is ignored by the whole internet.
 
+!!! info "Why the registrar's DNS editor may be grayed out"
+    If the registrar's record editor is locked with a note like "managed elsewhere", that is expected: the
+    registrar holds only the **list of nameservers**, and those point to another company, which holds the records.
+    Edit the records there. And if two or three nameservers are listed, they are **identical copies** kept for
+    safety, not one for the website and one for email: each holds every record, and the record *type* (A, MX, TXT)
+    decides the answer. More in [Nameservers: what they are for](How-DNS-Works.md#nameservers-what-they-are-for).
+
 The full story of how a lookup travels, and who runs DNS worldwide, is in [How DNS works](How-DNS-Works.md).
 
 ### DNS records: the lines on your page

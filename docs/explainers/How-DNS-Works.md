@@ -4,7 +4,7 @@
 single owner is run for the whole world. For readers who have never looked under the hood; every term is explained
 the first time, and the [glossary](#glossary) collects them.*
 
-[What it is](#what-dns-is) · [Names as a tree](#a-name-is-read-from-right-to-left) · [A lookup, step by step](#a-lookup-step-by-step) · [Caching](#remembering-answers-caching-and-ttl) · [Records](#what-a-domains-page-holds) · [Who runs it](#who-runs-dns-for-the-whole-world) · [Buying a name](#how-a-name-gets-onto-the-internet) · [What goes wrong](#what-can-go-wrong) · [Try it](#try-it-yourself) · [Glossary](#glossary)
+[What it is](#what-dns-is) · [Names as a tree](#a-name-is-read-from-right-to-left) · [A lookup, step by step](#a-lookup-step-by-step) · [Caching](#remembering-answers-caching-and-ttl) · [Records](#what-a-domains-page-holds) · [Nameservers](#nameservers-what-they-are-for) · [Who runs it](#who-runs-dns-for-the-whole-world) · [Buying a name](#how-a-name-gets-onto-the-internet) · [What goes wrong](#what-can-go-wrong) · [Try it](#try-it-yourself) · [Glossary](#glossary)
 
 ## What DNS is
 
@@ -120,6 +120,41 @@ common types:
 | **HTTPS / SVCB** | how best to connect (HTTP/3, encryption keys) | — |
 
 How the TXT records protect email is told in full in [How email gets delivered](Email-Delivery.md).
+
+## Nameservers: what they are for
+
+A **nameserver** is the computer that holds a domain's page of records and answers questions about it: "what is
+the website's address?", "where does the mail go?", "what does the SPF note say?". It is the authoritative server
+from step 4 of the lookup above. Three things about nameservers confuse almost everyone the first time.
+
+**1. The registrar only keeps a pointer.** At the registrar (the shop where the name is rented), the domain has
+one important setting: a short list of nameservers, for example `ns1.dnshost.example`, `ns2.dnshost.example`,
+`ns3.dnshost.example`. That list is all the registrar sends to the registry. It says "for this domain, ask these
+computers". The records themselves (A, MX, TXT) live on those nameservers, at whichever company runs them.
+
+**2. That is why the registrar's edit box can be grayed out.** Many registrars also offer to keep your records
+themselves. When your nameservers point *somewhere else*, any records typed at the registrar would never be asked
+for, so the registrar locks its own record editor and shows a note such as "DNS is managed elsewhere" or "using
+external nameservers". Nothing is broken: it is telling you to make record changes at the company named in the
+nameserver list. Leave the nameserver list itself alone, unless you are moving your DNS to another company.
+
+**3. Two or three nameservers are identical copies, not specialists.** It is natural to guess that one nameserver
+answers for the website and another for email. They do not. Every nameserver in the list holds the **same complete
+page**: website, mail, SPF, DKIM, DMARC, everything. A resolver asks any one of them; if that one is slow or down,
+it simply asks the next. Two is the minimum the rules ask for, and many hosts give three or four, ideally in
+different buildings or networks, so that one failure never takes the domain offline.
+
+<figure class="sketch sketch-wide"><span class="ai-tag">AI-created</span><svg viewBox="0 0 640 450" role="img" aria-labelledby="sk-nd-nameservers-t"><title id="sk-nd-nameservers-t">The registrar keeps only the list of three nameservers, its record editor grayed out; each of the three nameservers holds the same A, MX and TXT records, and the record type asked for decides the answer</title><defs><filter id="sk-nd-nameservers-pen"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="3.2"/></filter><filter id="sk-nd-nameservers-paper"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="7"/><feColorMatrix values="0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0 0.25  0 0 0 .10 0"/></filter><pattern id="sk-nd-nameservers-hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><line x1="0" y1="0" x2="0" y2="7" stroke="#8a4a2a" stroke-width="1.1" opacity=".55"/></pattern><pattern id="sk-nd-nameservers-dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="3" r="1" fill="#8a4a2a" opacity=".5"/><circle cx="6.5" cy="7" r=".8" fill="#8a4a2a" opacity=".4"/></pattern><marker id="sk-nd-nameservers-ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#3a2a1e" stroke-width="1.6" stroke-linecap="round"/></marker></defs><rect width="640" height="450" filter="url(#sk-nd-nameservers-paper)"/><g filter="url(#sk-nd-nameservers-pen)"><text x="30" y="44" class="h">Three copies of the same page</text><path class="p room" d="M30 80 L220 80 L220 190 L30 190Z"/><text x="125.0" y="119.0" text-anchor="middle" class="l">registrar</text><text x="125.0" y="141.0" text-anchor="middle" class="s">nameservers: ns1, ns2, ns3</text><text x="125.0" y="163.0" text-anchor="middle" class="s">records: grayed out</text><path class="p " d="M222 135 L268 135" marker-end="url(#sk-nd-nameservers-ah)"/><path class="p gold" d="M270 70 L380 70 L380 210 L270 210Z"/><text x="325" y="94" class="l" text-anchor="middle">ns1</text><text x="284" y="124" style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-style:normal;fill:#3a2a1e">A</text><text x="324" y="124" class="s">…</text><text x="284" y="150" style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-style:normal;fill:#3a2a1e">MX</text><text x="324" y="150" class="s">…</text><text x="284" y="176" style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-style:normal;fill:#3a2a1e">TXT</text><text x="324" y="176" class="s">…</text><path class="p room" d="M390 70 L500 70 L500 210 L390 210Z"/><text x="445" y="94" class="l" text-anchor="middle">ns2</text><text x="404" y="124" style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-style:normal;fill:#3a2a1e">A</text><text x="444" y="124" class="s">…</text><text x="404" y="150" style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-style:normal;fill:#3a2a1e">MX</text><text x="444" y="150" class="s">…</text><text x="404" y="176" style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-style:normal;fill:#3a2a1e">TXT</text><text x="444" y="176" class="s">…</text><path class="p room" d="M510 70 L620 70 L620 210 L510 210Z"/><text x="565" y="94" class="l" text-anchor="middle">ns3</text><text x="524" y="124" style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-style:normal;fill:#3a2a1e">A</text><text x="564" y="124" class="s">…</text><text x="524" y="150" style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-style:normal;fill:#3a2a1e">MX</text><text x="564" y="150" class="s">…</text><text x="524" y="176" style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-style:normal;fill:#3a2a1e">TXT</text><text x="564" y="176" class="s">…</text><text x="450" y="236" class="s" text-anchor="middle">every copy holds every record</text><text x="30" y="290" class="s">browser asks:</text><text x="180" y="290" style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-style:normal;fill:#3a2a1e">A?</text><text x="240" y="290" class="s">→ the website’s address</text><text x="30" y="340" class="s">mail server asks:</text><text x="180" y="340" style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-style:normal;fill:#3a2a1e">MX?</text><text x="240" y="340" class="s">→ where the mail goes</text><text x="30" y="390" class="s">receiver asks:</text><text x="180" y="390" style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-style:normal;fill:#3a2a1e">TXT?</text><text x="240" y="390" class="s">→ the SPF note</text><text x="30" y="432" class="l">Any copy answers; if one is down, the next one does.</text></g></svg><figcaption>Sketched for this page. ns1 to ns3 stand for any DNS host’s nameservers.</figcaption></figure>
+
+**The question decides the answer, not the server.** What makes a nameserver answer "website" or "email" is the
+**record type** in the question. A browser asks for the `A` record and gets the website's address; a mail server
+asks for the `MX` record and gets the mail server's name; a receiving mail server asks for the `TXT` record and gets
+the SPF note. Any of the copies gives the same answer to the same question.
+
+!!! tip "In practice"
+    To add or fix a record (SPF, DKIM, DMARC, a new website address): find the nameservers in a WHOIS lookup or at
+    your registrar, log in to the company that runs **those** nameservers, and edit there. The change appears on
+    all the copies by itself, usually within seconds to minutes.
 
 ## Who runs DNS for the whole world
 
