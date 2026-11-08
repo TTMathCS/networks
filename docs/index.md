@@ -80,6 +80,16 @@ Network and security professionals, university and beyond.
 
 <p class="level-check-link" markdown>Not sure which one is you? [Take the one-minute level check →](level-check.md)</p>
 
+## Explainers { #explainers }
+
+Picture-led walks through the everyday internet, for readers who have never seen the words before.
+
+| Explainer | What you will understand |
+| --- | --- |
+| [How email gets delivered](explainers/Email-Delivery.md) | a real case of bounced school email, and how domains, DNS, SPF, DKIM and DMARC fixed it |
+| [How DNS works](explainers/How-DNS-Works.md) | the internet's phone book, step by step, and who runs it for the whole world |
+| [How a web page reaches you](explainers/How-a-Page-Reaches-You.md) | the journey of one click: addresses, routers, HTTPS and CDNs |
+
 ## Books { #books }
 
 Each book is a full course in pages of five to six minutes, from the first idea to current research.

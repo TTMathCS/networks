@@ -36,3 +36,12 @@
 /* Long display formulas scroll inside their own box on phones instead of widening the page */
 .md-typeset .katex-display { overflow-x: auto; overflow-y: hidden; padding: .2em 0; }
 .md-typeset .katex { position: relative; }
+
+/* The explainers' sketches (8 Nov 2026): on a phone they keep a readable size and slide sideways inside their own box */
+@media (max-width: 600px) {
+  .md-typeset figure.sketch.sketch-wide { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .md-typeset figure.sketch.sketch-wide svg { width: 540px; max-width: none; }
+  .md-typeset figure.sketch.sketch-wide .ai-tag { position: sticky; float: right; top: 6px; right: 6px; margin-bottom: -22px; }
+  .md-typeset figure.sketch.sketch-wide figcaption { position: sticky; left: 0; max-width: calc(100vw - 2.4rem); }
+  .md-typeset figure.sketch.sketch-wide figcaption::after { content: " Slide the drawing sideways to see all of it."; }
+}

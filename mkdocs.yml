@@ -109,6 +109,11 @@ nav:
       - "VPNs": topics/VPNs.md
       - "Firewalls": topics/Firewalls.md
       - "DNS: names to addresses": topics/DNS.md
+  - Explainers:
+      - explainers/index.md
+      - "How email gets delivered": explainers/Email-Delivery.md
+      - "How DNS works": explainers/How-DNS-Works.md
+      - "How a web page reaches you": explainers/How-a-Page-Reaches-You.md
   - Books:
       - books/index.md
       - How networks work:

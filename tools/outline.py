@@ -36,6 +36,11 @@ BOOKS = {
   "10-A-Firewall-with-nftables", "11-A-WireGuard-VPN", "12-SSH-Keys-and-Hardening", "13-Surveying-Your-Wi-Fi",
   "14-Scanning-Your-Own-Network", "15-Crafting-Packets-with-Scapy"]),
 }
+EXPLAINERS = [
+ ("Email-Delivery", "How email gets delivered"),
+ ("How-DNS-Works", "How DNS works"),
+ ("How-a-Page-Reaches-You", "How a web page reaches you"),
+]
 TOPICS = [
  ("Home-Wi-Fi", "Set up home Wi-Fi well"),
  ("Internet-Is-Down", "When the internet is down"),

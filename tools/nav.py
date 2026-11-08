@@ -2,10 +2,11 @@
 Run from the repo root: python3 tools/nav.py"""
 import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
-from outline import START, BOOKS, TOPICS
+from outline import START, BOOKS, TOPICS, EXPLAINERS
 L = ["  # nav: start", "  - Home: index.md", "  - Start:", "      - start/index.md", "      - Find your level: level-check.md"]
 L += [f"      - start/{f}.md" for f, _ in START]
 L += ["  - Topics:", "      - topics/index.md"] + [f"      - \"{t}\": topics/{f}.md" for f, t in TOPICS]
+L += ["  - Explainers:", "      - explainers/index.md"] + [f"      - \"{t}\": explainers/{f}.md" for f, t in EXPLAINERS]
 L += ["  - Books:", "      - books/index.md"]
 for slug in ["networks", "math", "wireless", "security"]:
     title, chs = BOOKS[slug]

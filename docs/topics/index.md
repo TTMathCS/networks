@@ -21,3 +21,5 @@ Each guide stays short and links to the [Books](../books/index.md) and [Labs](..
 | [VPNs](VPNs.md) | when a VPN helps, when it does not, and how to build one |
 | [Firewalls](Firewalls.md) | decide what may come in and go out, at home and on servers |
 | [DNS: names to addresses](DNS.md) | how names are found, made private, kept honest, and fixed |
+
+New to all this? The [Explainers](../explainers/index.md) start from the very beginning: [how email gets delivered](../explainers/Email-Delivery.md), [how DNS works](../explainers/How-DNS-Works.md) and [how a web page reaches you](../explainers/How-a-Page-Reaches-You.md).
